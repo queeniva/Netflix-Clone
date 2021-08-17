@@ -6,6 +6,9 @@ import "./index.css"
 
 
 function Banner() {
+    function truncate(str, n){
+        return str?.length > n ? str.substr(0, n-1) + "..." : str;
+    }
     const [movie, setmovie] = useState([]);
     useEffect(() => {
         async function fetchData() {
@@ -22,8 +25,7 @@ function Banner() {
                 backgroundSize: "cover",
                 backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
                 backgroundPosition: "center center"
-            }}
-        >
+            }}>
             <div className="banner__contents">
                 <h1 className="banner__title">{movie?.title || movie?.name || movie?.original_name}</h1>
                 <div className="banner__buttons">
@@ -31,7 +33,7 @@ function Banner() {
                     <button className="banner__button">My List</button>
                 </div>
                 <h1 className="banner__description">
-                    {movie.overview}
+                  {truncate(movie?.overview, 148)}
                 </h1>
             </div>
             <div className="banner--fadeBottom"></div>
