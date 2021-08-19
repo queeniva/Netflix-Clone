@@ -99,14 +99,13 @@ margin-left: 20px;
 
 
 .nav {
-  background: #111;
   display: flex;
   height: 30px;
   justify-content: space-between;
   padding: 20px;
   position: fixed;
   top: 0;
-  transition: all 0.5s;
+  transition: all 0.3s;
   transition-timing-function: ease-in;
   width: 100%;
   z-index: 1;
