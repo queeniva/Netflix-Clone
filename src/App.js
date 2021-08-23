@@ -3,6 +3,7 @@ import Row from './Row';
 import requests from './request';
 import Banner from './Banner';
 import Nav from './Nav';
+import Footer from './Footer';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
      <Row title="Horror " fetchURL = {requests.fetchTopRated} />
      <Row title="Documentaries" fetchURL = {requests.fetchActionMovies} />
      </div>
-
+     <Footer />
     </div>
   );
 }
